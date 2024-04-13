@@ -198,12 +198,7 @@ ifeq ($(USE_HDF5), 1)
 	LIBRARIES += hdf5_hl hdf5
 endif
 ifeq ($(USE_OPENCV), 1)
-	LIBRARIES += opencv_core opencv_highgui opencv_imgproc
-
-	ifeq ($(OPENCV_VERSION), 3)
-		LIBRARIES += opencv_imgcodecs
-	endif
-
+	LIBRARIES += opencv_core opencv_highgui opencv_imgproc opencv_imgcodecs
 endif
 PYTHON_LIBRARIES ?= boost_python python2.7
 WARNINGS := -Wall -Wno-sign-compare
